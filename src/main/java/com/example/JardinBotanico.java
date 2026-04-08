@@ -1,3 +1,4 @@
+package src.main.java.com.example;
 public class JardinBotanico implements EspacioCultural {
 
     private String nombre;
