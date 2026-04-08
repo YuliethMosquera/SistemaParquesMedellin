@@ -1,17 +1,21 @@
 package com.example;
 
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        EspacioCultural jardin = new JardinBotanico("Jardín Botánico de Medellín", "Medellín");
-        EspacioCultural museo = new MuseoDeAntioquia("Museo de Antioquia", 1881);
-        EspacioCultural parque = new ParqueExplora("Parque Explora", 10);
+        ArrayList<EspacioCultural> lista = new ArrayList<>();
 
-        jardin.mostrarInformacion();
-        System.out.println("-------------------");
-        museo.mostrarInformacion();
-        System.out.println("-------------------");
-        parque.mostrarInformacion();
+        lista.add(new JardinBotanico("Jardín Botánico", "Medellín"));
+        lista.add(new MuseoDeAntioquia("Museo de Antioquia", 1881));
+        lista.add(new ParqueExplora("Parque Explora", 10));
+
+        for (EspacioCultural lugar : lista) {
+            lugar.mostrarHorario();
+            System.out.println("Requisito: " + lugar.obtenerRequisitoEntrada());
+            lugar.realizarActividadPrincipal();
+            System.out.println("----------------------");
+        }
     }
 }

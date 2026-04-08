@@ -3,16 +3,25 @@ package com.example;
 public class MuseoDeAntioquia implements EspacioCultural {
 
     private String nombre;
-    private int anioFundacion;
+    private int anio;
 
-    public MuseoDeAntioquia(String nombre, int anioFundacion) {
+    public MuseoDeAntioquia(String nombre, int anio) {
         this.nombre = nombre;
-        this.anioFundacion = anioFundacion;
+        this.anio = anio;
     }
 
     @Override
-    public void mostrarInformacion() {
-        System.out.println("Museo: " + nombre);
-        System.out.println("Año de fundación: " + anioFundacion);
+    public void mostrarHorario() {
+        System.out.println(nombre + " abre de 9am a 6pm");
+    }
+
+    @Override
+    public String obtenerRequisitoEntrada() {
+        return "Entrada paga";
+    }
+
+    @Override
+    public void realizarActividadPrincipal() {
+        System.out.println("Observar exposiciones de arte");
     }
 }

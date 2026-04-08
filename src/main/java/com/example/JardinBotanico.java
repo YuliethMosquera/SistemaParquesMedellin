@@ -1,4 +1,5 @@
 package com.example;
+
 public class JardinBotanico implements EspacioCultural {
 
     private String nombre;
@@ -10,8 +11,17 @@ public class JardinBotanico implements EspacioCultural {
     }
 
     @Override
-    public void mostrarInformacion() {
-        System.out.println("Jardín Botánico: " + nombre);
-        System.out.println("Ubicación: " + ubicacion);
+    public void mostrarHorario() {
+        System.out.println(nombre + " abre de 8am a 5pm");
+    }
+
+    @Override
+    public String obtenerRequisitoEntrada() {
+        return "Entrada gratuita";
+    }
+
+    @Override
+    public void realizarActividadPrincipal() {
+        System.out.println("Recorrer jardines y disfrutar la naturaleza");
     }
 }

@@ -1,4 +1,7 @@
 package com.example;
+
 public interface EspacioCultural {
-    void mostrarInformacion();
+    void mostrarHorario();
+    String obtenerRequisitoEntrada();
+    void realizarActividadPrincipal();
 }
